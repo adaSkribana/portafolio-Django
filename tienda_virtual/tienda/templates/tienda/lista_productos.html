@@ -1,12 +1,9 @@
 <!-- templates/tienda/lista_productos.html -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Productos</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
     <h1>Lista de Productos</h1>
     <ul>
         {% for producto in productos %}
@@ -17,5 +14,4 @@
         {% endfor %}
     </ul>
     <a href="{% url 'ver_carrito' %}">Ver Carrito</a>
-</body>
-</html>
+ {% endblock %}
